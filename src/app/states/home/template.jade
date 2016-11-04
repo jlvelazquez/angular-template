@@ -1,0 +1,17 @@
+div
+    h1 {{ home.content }}
+    h1 {{ home.content | l33t }}
+    div.c-button-round.red(ng-click="home.decrementCounter()") -
+    div.c-display {{ home.count }}
+    div.c-button-round.blue(ng-click="home.incrementCounter()") +
+    info-box
+    info-box(funny="")
+    info-box-cmp
+    input-box
+
+    div.c-message-transform
+        message-l33t
+        message-reversed
+        message-without-vowels
+
+    div(ng-show="home.countries.length", ng-repeat="country in home.countries | orderBy: 'capital'") {{ country.capital }} ({{ country.name }})

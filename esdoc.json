@@ -1,0 +1,5 @@
+{
+    "title": "Angular Template",
+    "source": "./src",
+    "destination": "./docs"
+}
