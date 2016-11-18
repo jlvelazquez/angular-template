@@ -1,0 +1,14 @@
+@import '../../styles/colors';
+
+.d-info-box {
+  padding: 15px 0 15px 0;
+  border: 3px solid map-get($pastelColors, green);
+  margin: 20px 0 20px 0;
+
+  & > div {
+    color: map-get($pastelColors, green);
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}

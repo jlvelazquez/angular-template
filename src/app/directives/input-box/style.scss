@@ -1,0 +1,43 @@
+@import '../../styles/colors';
+
+.d-input-box {
+  margin: 10px 0;
+}
+
+.d-input-box-display-container {
+  display: inline-block;
+  height: 20px;
+  line-height: 20px;
+  border: 2px solid map-get($pastelColors, yellow);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  width: 250px;
+}
+
+.d-input-box-display {
+  display: inline-block;
+  height: 20px;
+  background-color: transparent;
+  border: 0 solid transparent;
+  color: map-get($pastelColors, white);
+  width: 250px;
+}
+
+.d-input-box-action {
+  display: inline-block;
+  height: 20px;
+  line-height: 20px;
+  width: 50px;
+  text-align: center;
+  border: 2px solid map-get($pastelColors, yellow);
+  color: map-get($pastelColors, yellow);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  cursor: pointer;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

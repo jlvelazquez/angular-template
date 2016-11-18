@@ -1,7 +1,7 @@
 // Styles
 
-import reset from './styles/reset.styl';
-import layout from './styles/layout.styl';
+import './styles/reset';
+import './styles/layout';
 
 // Angular
 
@@ -32,6 +32,6 @@ angular
       .state('home', Home);
 
     router.otherwise('/');
-    
+
     redux.createStoreWith(reducer, middleware, []);
   }]);

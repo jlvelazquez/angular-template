@@ -1,9 +1,9 @@
+import './style';
 import Controller from './controller';
-import './style.styl';
-import template from './template.jade';
+import template from './template';
 
 export default {
-  template: template({}),
+  template: template,
   controller: () => new Controller(),
   controllerAs: 'infoBoxCmp'
 }

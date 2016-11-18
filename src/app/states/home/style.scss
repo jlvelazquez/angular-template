@@ -1,0 +1,49 @@
+@import '../../styles/colors';
+
+.c-button-round {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-width: 3px;
+  border-style: solid;
+  text-align: center;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 1.6rem;
+  box-sizing: border-box;
+  margin: 10px;
+  cursor: pointer;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  &.red {
+    color: map-get($pastelColors, red);
+    border-color: map-get($pastelColors, red);
+  }
+
+  &.green {
+    color: map-get($pastelColors, green);
+    border-color: map-get($pastelColors, green);
+  }
+
+  &.blue {
+    color: map-get($pastelColors, darkBlue);
+    border-color: map-get($pastelColors, darkBlue);
+  }
+}
+
+.c-display {
+  display: inline-block;
+  min-width: 20px;
+  text-align: center;
+}
+
+.c-message-transform {
+  width: 100%;
+  height: 100px;
+  display: flex;
+}

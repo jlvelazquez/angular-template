@@ -17,39 +17,29 @@ module.exports = env => ({
     port: 3333
   },
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.html', '.scss']
   },
   module: {
     loaders: [
       {
         test: /\.js?$|\.jsx?$/,
         exclude: /node_modules/,
-        loader: 'babel'
+        loader: 'babel-loader'
       },
       {
         test: /\.scss$/,
         exclude: /node_modules/,
-        loaders: ['style', 'css', 'sass']
-      },
-      {
-        test: /\.styl$/,
-        exclude: /node_modules/,
-        loaders: ['style', 'css', 'stylus']
-      },
-      {
-        test: /\.jade$/,
-        exclude: /node_modules/,
-        loader: 'pug'
+        loaders: ['style-loader', 'css-loader', 'sass-loader']
       },
       {
         test: /\.jpg$/,
         exclude: /node_modules/,
-        loader: 'file'
+        loader: 'file-loader'
       },
       {
         test: /\.png$/,
         exclude: /node_modules/,
-        loader: 'url',
+        loader: 'url-loader',
         query: {
           mimetype: 'image/png'
         }
@@ -57,12 +47,12 @@ module.exports = env => ({
       {
         test: /\.html$/,
         exclude: /node_modules/,
-        loader: 'html'
+        loader: 'html-loader'
       },
       {
         test: /\.json$/,
         include: /node_modules/,
-        loader: 'json'
+        loader: 'json-loader'
       }
     ]
   },
