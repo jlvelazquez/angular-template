@@ -2,10 +2,10 @@ import test from 'tape';
 import Link from '../link.js';
 
 test('If the attribute is funny...', t => {
-    
+
     let attributes = { funny: '' };
     let scope = { directiveContent: '' };
-    
+
     new Link(scope, attributes);
 
     t.plan(1);
@@ -13,10 +13,10 @@ test('If the attribute is funny...', t => {
 });
 
 test('If the attribute is not funny...', t => {
-    
+
     let attributes = {};
     let scope = { directiveContent: '' };
-    
+
     new Link(scope, attributes);
 
     t.plan(1);

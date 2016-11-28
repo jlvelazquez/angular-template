@@ -1,11 +1,13 @@
-const { resolve } = require('path');
+/* eslint-disable global-require */
 
-require('glob')(resolve(__dirname, '/src/**/_test_'), (error, files) => {
+require('babel-core/register');
 
-  console.log(files);
-  if (error) {
-    throw error;
+require('glob')(`${ __dirname }/src/**/_test_`, (err, files) => {
+
+  if (err) {
+    throw err;
   }
+
   files.forEach(file => {
     require(file);
   });
