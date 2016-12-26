@@ -4,9 +4,11 @@
   <div class="c-button-round red" ng-click="home.decrementCounter()">-</div>
   <div class="c-display">{{ home.count }}</div>
   <div class="c-button-round blue" ng-click="home.incrementCounter()">+</div>
-  <info-box></info-box>
-  <info-box funny=""></info-box>
-  <info-box-cmp></info-box-cmp>
+  <div class="directives">
+    <info-box class="directive"></info-box>
+    <info-box class="directive" funny></info-box>
+    <info-box-cmp class="directive"></info-box-cmp>
+  </div>
   <input-box></input-box>
 
   <div class="c-message-transform">
