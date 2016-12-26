@@ -1,7 +1,7 @@
 {
   "name": "angular-template",
   "version": "1.0.0",
-  "description": "An Angular 1.x template with ES2015 and Webpack.",
+  "description": "An Angular 1.6.x template with ES2015 and Webpack.",
   "main": "index.js",
   "scripts": {
     "start": "npm run copy-files && webpack-dev-server --env.dev",
@@ -21,7 +21,7 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "angular": "1.6.0",
+    "angular": "1.6.1",
     "angular-new-router": "0.5.3",
     "angular-ui-router": "0.3.2",
     "moment": "2.17.1",
@@ -39,7 +39,7 @@
     "babel-preset-stage-0": "6.16.0",
     "copyfiles": "1.0.0",
     "css-loader": "0.26.1",
-    "esdoc": "0.4.8",
+    "esdoc": "0.5.1",
     "eslint": "3.12.2",
     "file-loader": "0.9.0",
     "glob": "7.1.1",
@@ -47,14 +47,14 @@
     "html-webpack-plugin": "2.24.1",
     "json-loader": "0.5.4",
     "nock": "9.0.2",
-    "node-sass": "4.1.0",
+    "node-sass": "4.1.1",
     "nyc": "10.0.0",
-    "sass-loader": "4.1.0",
+    "sass-loader": "4.1.1",
     "style-loader": "0.13.1",
     "tap-spec": "4.1.1",
     "tape": "4.6.3",
     "url-loader": "0.5.7",
-    "webpack": "2.2.0-rc.1",
+    "webpack": "2.2.0-rc.2",
     "webpack-dev-server": "2.2.0-rc.0"
   },
   "config": {
