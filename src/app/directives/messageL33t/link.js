@@ -1,15 +1,26 @@
 import di from '../../util/di';
 
+/**
+ * This is the link of the directive.
+ */
 export default class Link {
 
-    static mapStateToThis(state) {
-      return {
-        messages: state.messages
-      };
-    }
+  /**
+   * This method maps redux state to the directive scope.
+   */
+  static mapStateToThis(state) {
+    return {
+      messages: state.messages
+    };
+  }
 
-    constructor (scope) {
-      let unsubscribe = di('$ngRedux').connect(Link.mapStateToThis, {})(scope);
-      scope.$on('$destroy', unsubscribe);
-    }
+  /**
+   * This is the constructor.
+   *
+   * @param {Object} scope This is the directive scope
+   */
+  constructor (scope) {
+    let unsubscribe = di('$ngRedux').connect(Link.mapStateToThis, {})(scope);
+    scope.$on('$destroy', unsubscribe);
+  }
 }

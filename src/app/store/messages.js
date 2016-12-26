@@ -1,5 +1,9 @@
 const ADD = 'my-app/message/ADD';
 
+/**
+ * This function gets the message.
+ * @return {Object} Action
+ */
 export function addMessage (message) {
   return function (dispatch) {
     setTimeout(() => {
@@ -8,6 +12,12 @@ export function addMessage (message) {
   };
 }
 
+/**
+ * This is the reducer.
+ * @param  {Array}  [state=[]]  [description]
+ * @param  {Object} [action={}] [description]
+ * @return {Object}             This is the new state
+ */
 export default function reducer (state = [], action = {}) {
   switch (action.type) {
     case ADD:

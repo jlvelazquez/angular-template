@@ -2,6 +2,10 @@ import request from 'superagent';
 
 const GET = 'my-app/countries/GET';
 
+/**
+ * This function gets the countries.
+ * @return {Object} Action
+ */
 export function getCountries () {
   return function (dispatch) {
     request
@@ -15,6 +19,12 @@ export function getCountries () {
   };
 }
 
+/**
+ * This is the reducer.
+ * @param  {Array}  [state=[]]  [description]
+ * @param  {Object} [action={}] [description]
+ * @return {Object}             This is the new state
+ */
 export default function reducer (state = [], action = {}) {
   switch (action.type) {
     case GET:
