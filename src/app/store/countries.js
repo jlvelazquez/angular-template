@@ -6,6 +6,7 @@ const GET = 'my-app/countries/GET';
  * This function gets the countries.
  * @return {Object} Action
  */
+
 export function getCountries () {
   return function (dispatch) {
     request
@@ -25,6 +26,7 @@ export function getCountries () {
  * @param  {Object} [action={}] [description]
  * @return {Object}             This is the new state
  */
+
 export default function reducer (state = [], action = {}) {
   switch (action.type) {
     case GET:

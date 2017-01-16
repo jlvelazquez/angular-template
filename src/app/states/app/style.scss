@@ -4,7 +4,6 @@
   display: flex;
   justify-content: space-between;
   align-self: center;
-  padding: 0 10px;
 }
 
 .app-routes {
@@ -13,10 +12,8 @@
   div {
     margin: 10px 0;
     height: 30px;
-
-    a {
-      line-height: 30px;
-    }
+    line-height: 30px;
+    cursor: pointer;
   }
 
   div + div {

@@ -40,7 +40,9 @@ angular
 
     routerProvider.otherwise('/login');
 
-    redux.createStoreWith(reducer, middleware, []);
+    redux.createStoreWith(reducer, middleware, [
+      window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+    ]);
   }])
   .run(['$rootScope', '$state', 'authService', ($rootScope, $state, authService) => {
     $rootScope.$on('$stateChangeStart', (event, toState) => {

@@ -6,5 +6,13 @@ export default {
   url: '/login',
   template: template,
   controllerAs: 'login',
-  controller: ['$state', 'authService', ($state, authService) => new Controller($state, authService)]
+  controller: [
+    '$state',
+    '$scope',
+    '$ngRedux',
+    'authService',
+    ($state, $scope, $ngRedux, authService) => {
+      return new Controller($state, $scope, $ngRedux, authService)
+    }
+  ]
 };
