@@ -16,22 +16,50 @@ import thunk from 'redux-thunk';
 
 let middleware = [thunk];
 
+import Login from './states/login';
+import App from './states/app';
 import Home from './states/home';
+import About from './states/about';
 
 import filters from './filters';
+import services from './services';
 import directives from './directives';
 import components from './components';
 
 const providers = ['$stateProvider', '$urlRouterProvider', '$ngReduxProvider'];
 
 angular
-  .module('myApp', [router, filters, directives, components, ngRedux])
-  .config([...providers, (state, router, redux) => {
+  .module('myApp', [router, filters, services, directives, components, ngRedux])
+  .config([...providers, (state, routerProvider, redux) => {
 
     state
-      .state('home', Home);
+      .state('login', Login)
+      .state('app', App)
+      .state('home', Home)
+      .state('about', About);
 
-    router.otherwise('/');
+    routerProvider.otherwise('/login');
 
     redux.createStoreWith(reducer, middleware, []);
+  }])
+  .run(['$rootScope', '$state', 'authService', ($rootScope, $state, authService) => {
+    $rootScope.$on('$stateChangeStart', (event, toState) => {
+
+      // If we are not logged we are redirected to login page.
+
+      if (!authService.isLogged() && toState.name !== 'login') {
+        event.preventDefault();
+        $state.go('login');
+      }
+
+      // If we are already logged, when going to login page we are redirected
+      // to home page.
+
+      if (authService.isLogged() && toState.name === 'login') {
+        event.preventDefault();
+        $state.go('home');
+      }
+
+      // En cualquier otro caso, vamos a la página solicitada.
+    });
   }]);

@@ -14,7 +14,7 @@ module.exports = env => ({
   devServer: {
     inline: true,
     contentBase: resolve(__dirname, 'dist'),
-    port: 3333
+    port: 3000
   },
   resolve: {
     extensions: ['.js', '.html', '.scss']
@@ -60,8 +60,5 @@ module.exports = env => ({
     new HtmlWebpackPlugin({
       template: './index.html'
     })
-  ]/* ,
-  performance: {
-    hints: false
-  } */
+  ]
 });

@@ -4,6 +4,6 @@ import template from './template';
 
 export default {
   template: template,
-  controller: () => new Controller(),
-  controllerAs: 'infoBoxCmp'
+  controllerAs: 'infoBoxCmp',
+  controller: () => new Controller()
 }

@@ -4,13 +4,11 @@
   outline: 0;
 }
 
-
 body {
   padding: 20px;
   width: 900px;
   margin: 0 auto;
   color: map-get($pastelColors, blue);
-  background-color: map-get($pastelColors, black);
 }
 
 h1 {
