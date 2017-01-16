@@ -1,7 +1,11 @@
-<nav>
-  <div ui-sref-active="active"><a href ui-sref="home">Home</a></div>
-  <div ui-sref-active="active"><a href ui-sref="about">About</a></div>
-  <button type="button" name="button" ng-click="app.logout()">Logout</button>
+<nav class="app-nav">
+  <div class="app-routes">
+    <div ui-sref-active="active"><a href ui-sref="home">Home</a></div>
+    <div ui-sref-active="active"><a href ui-sref="about">About</a></div>
+  </div>
+  <div class="app-actions">
+    <i class="material-icons" ng-click="app.logout()">power_settings_new</i>
+  </div>
 </nav>
 
 <ui-view></ui-view>

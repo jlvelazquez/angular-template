@@ -1,3 +1,39 @@
+@import '../../styles/colors';
+
+.app-nav {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  padding: 0 10px;
+}
+
+.app-routes {
+  display: flex;
+
+  div {
+    margin: 10px 0;
+    height: 30px;
+
+    a {
+      line-height: 30px;
+    }
+  }
+
+  div + div {
+    margin-left: 20px;
+  }
+}
+
+.app-actions {
+  display: flex;
+
+  & > i {
+    color: map-get($pastelColors, black);
+    cursor: pointer;
+    align-self: center;
+  }
+}
+
 button {
   cursor: pointer;
 }
